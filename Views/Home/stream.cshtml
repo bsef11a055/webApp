@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Stream";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+
+    div.scroll
+    {
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+    .pull-right
+    {
+        float: right!important;
+        margin-top: -58px;
+        position: absolute;
+        margin-left: 950px;
+    }
+
+</style>
+
+<div class="scroll">
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h1 style="color:#F4981F; font-family:'Segoe Marker'">Stream</h1>
+                <form action="/Home/Redirect">
+                    <div class="btn-group pull-right">
+                        <button name="button1" value="list" type="submit" class="button" style="width:60px; height:58px; border:none"><img src="~/Images/List.png" width="53" height="55"/>button2</button>&nbsp&nbsp&nbsp&nbsp
+                        <button name="button1" value="stream" type="submit" class="button" style="width:60px; height:58px; border:none"><img src="~/Images/House.png" width="53" height="55"/>button2</button>&nbsp&nbsp&nbsp&nbsp
+                        <button name="button1" value="setting" type="submit" class="button" style="width:60px; height:58px; border:none"><img src="~/Images/Settings.png" width="53" height="55"/>button4</button>&nbsp&nbsp&nbsp&nbsp
+                    </div>
+                    <img alt="" src="http://192.168.1.126:81/videostream.cgi?user=admin&amp;pwd=pucit">
+                </form>                                          
+            </div>
+    </div>
+</div>
