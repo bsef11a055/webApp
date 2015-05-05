@@ -11,10 +11,10 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-        <meta charset="utf-8">
-        <title>Flex - Free Responsive Template by templatemo</title>
+        <meta charset="utf-8" />
     	<meta name="description" content="">
         <meta name="viewport" content="width=device-width">
+         <title>RS Security Solutions</title>
 <!-- 
 Flex Template 
 http://www.templatemo.com/preview/templatemo_406_flex 
@@ -53,7 +53,7 @@ http://www.templatemo.com/preview/templatemo_406_flex
                             <div class="row">
                                 <div class="logo-wrapper col-md-4 col-sm-2 col-xs-8">
                                     <h1>
-                                        <a href="#">Surveillance</a>
+                                        <a href="#">RS Security Solutions</a>
                                     </h1>
                                 </div> <!-- /.logo-wrapper -->
                                 <div class="col-md-8 col-sm-10 col-xs-4 main-menu text-right">
@@ -148,9 +148,9 @@ http://www.templatemo.com/preview/templatemo_406_flex
                                                             $(document).ready(function () {
 
                                                                     $.getJSON("/Home/cms" , function (data) {
-
+                                                                        $('#t').append('<tr><td>.</td></tr>');
                                                                         $.each(data, function (i, item) {
-
+                                                                            
                                                                             $('#t').append('<tr><td><pre  class="heading-section col-md-12 text-center";  style="font-size:large; font-weight:bolder; color:#FF8282">' + item.camName +
                                                                                  '</td> <td><pre class="heading-section col-md-12 text-center"; style="font-family:Arial"> <a style="font-family:Arial; font-size:larger; color:#66C2C2"  href="#" id="mylink" onclick=load("' + item.camPass+ '")>View </a></pre>            '
                                                                                 );
@@ -194,7 +194,7 @@ http://www.templatemo.com/preview/templatemo_406_flex
                                             <div style="padding-top:1cm">
                                             
                                                  <div class="heading-section col-md-12 text-center">
-                                                     <img alt="" id="myImage" src="/" onerror="alert()" >
+                                                     <img alt="" id="myImage" src="http://39.42.19.127:81/mjpg/video.mjpg?user=admin&password=pucit&channel=0" onerror="alert()" >
                                                    <div class="error"></div>
                                                  </div>
                                                 
@@ -500,7 +500,7 @@ http://www.templatemo.com/preview/templatemo_406_flex
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-xs-12 text-left">
-                        Copyright © 2015 Rumi Software Solutions
+                        Copyright © 2015 RS Solutions
                     </div> <!-- /.text-center -->
                     <div class="col-md-4 hidden-xs text-right">
                         <a href="#top" id="go-top">Back to top</a>
