@@ -14,7 +14,12 @@
         <meta charset="utf-8" />
     	<meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-         <title>RS Security Solutions</title>
+
+        @*<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<script type="text/javascript" src="http://www.umediaserver.net/bin/FlashPlayer/umsplayer.js" charset="utf-8">
+</script>*@
+
+         <title>iVision</title>
 <!-- 
 Flex Template 
 http://www.templatemo.com/preview/templatemo_406_flex 
@@ -33,17 +38,16 @@ http://www.templatemo.com/preview/templatemo_406_flex
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
-
-
+        
         <div class="site-main" id="sTop">
             <div class="site-header">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <ul class="social-icons">
+                           @* <ul class="social-icons">
                                 <li><a href="#" class="fa fa-facebook"></a></li>
                                 <li><a href="#" class="fa fa-twitter"></a></li>
-                            </ul>
+                            </ul>*@
                         </div> <!-- /.col-md-12 -->
                     </div> <!-- /.row -->
                 </div> <!-- /.container -->
@@ -53,7 +57,7 @@ http://www.templatemo.com/preview/templatemo_406_flex
                             <div class="row">
                                 <div class="logo-wrapper col-md-4 col-sm-2 col-xs-8">
                                     <h1>
-                                        <a href="#">RS Security Solutions</a>
+                                        <a href="#">iVision</a>
                                     </h1>
                                 </div> <!-- /.logo-wrapper -->
                                 <div class="col-md-8 col-sm-10 col-xs-4 main-menu text-right">
@@ -137,7 +141,7 @@ http://www.templatemo.com/preview/templatemo_406_flex
                                                     <p>Select the camera to view Stream</p>
                                                 </div> <!-- /.heading-section -->
                                            </div>
-
+                                         
                                             <div style="padding-top:1cm">
                                             
                                                  <div class="heading-section col-md-12 text-center">
@@ -152,13 +156,14 @@ http://www.templatemo.com/preview/templatemo_406_flex
                                                                         $.each(data, function (i, item) {
                                                                             
                                                                             $('#t').append('<tr><td><pre  class="heading-section col-md-12 text-center";  style="font-size:large; font-weight:bolder; color:#FF8282">' + item.camName +
-                                                                                 '</td> <td><pre class="heading-section col-md-12 text-center"; style="font-family:Arial"> <a style="font-family:Arial; font-size:larger; color:#66C2C2"  href="#" id="mylink" onclick=load("' + item.camPass+ '")>View </a></pre>            '
+                                                                                 '</td> <td><pre class="heading-section col-md-12 text-center"; style="font-family:Arial"> <a style="font-family:Arial; font-size:larger; color:#66C2C2"  href="#stream" id="mylink" onclick=load("' + item.camPass+ '")>View </a></pre>            '
                                                                                 );
                                                                         });
 
                                                                     });
                                                             });
                                                         </script>
+                                                        
                                                     </table>     
                                                  </div>
                                             </div>
@@ -171,13 +176,14 @@ http://www.templatemo.com/preview/templatemo_406_flex
               </div> <!-- /.row -->
             </div> <!-- /.container -->
 
+     
 
         <!--STREAM-->
         <div class="content-section" id="stream">
             <div class="container">
                 <div class="row">
                     <div class="site-slider">
-                        <div class="slider">
+                        <div class="slider">Wordp
                             <div class="flexslider">
                                 <ul class="slides">
                                     <li>
@@ -191,14 +197,103 @@ http://www.templatemo.com/preview/templatemo_406_flex
                                                 </div> <!-- /.heading-section -->
                                            </div>
 
-                                            <div style="padding-top:1cm">
+                                            <div style="padding-top:1cm" >
                                             
-                                                 <div class="heading-section col-md-12 text-center">
-                                                     <img alt="" id="myImage" src="http://39.42.19.127:81/mjpg/video.mjpg?user=admin&password=pucit&channel=0" onerror="alert()" >
+                                                 @*<div class="heading-section col-md-12 text-center">
+                                                     <img id="myImage" src="" onerror="alert()" />
+                                                     <iframe width="700" height="500" id="iid" src=""></iframe>
                                                    <div class="error"></div>
-                                                 </div>
-                                                
+                                                 </div>*@
+                                                <object classid="clsid:E23FE9C6-778E-49D4-B537-38FCDE4887D8" codebase="http://downloads.videolan.org/pub/videolan/vlc/latest/win32/axvlc.cab" width="640" height="480" id="vlc" events="True">
+                                               <param name="showdisplay" value="True">
+                                               <param name="autoloop" value="True">
+                                              <param name="autoplay" value="True">                                   
+                                               <embed height="480" width="640" type="application/x-vlc-plugin" id="myImage" pluginspage="http://www.videolan.org" version="VideoLAN.VLCPlugin.2" autoplay="yes" target="">
+                                               </object>
                                             </div>
+                                            
+                                                 @*<div class="heading-section col-md-12 text-center">
+                                                     <video id="myImage" src="rtsp://217.146.95.166:554/playlist/ch12zqcif.3gp" onerror="alert()" />
+                                                   <div class="error"></div>
+                                                 </div>*@
+                                                
+                                         
+  
+                                        @*<div id="player-container"></div>
+<script type="text/javascript">
+    embedPlayer('player-container', { flashvars: { 'rtsp': 'rtsp://217.146.95.166:554/playlist/ch12zqcif.3gp', 'autoplay': true }, size: { width: 352, height: 240 }, playerStyle: 'quick' });
+</script>*@
+
+
+@*                                       <object classid="clsid:E23FE9C6-778E-49D4-B537-38FCDE4887D8" codebase="http://downloads.videolan.org/pub/videolan/vlc/latest/win32/axvlc.cab" width="640" height="480" id="vlc" events="True">
+<param name="src" value="rtsp://217.146.95.166:554/playlist/ch12zqcif.3gp">
+<param name="showdisplay" value="True">
+<param name="autoloop" value="True">
+<param name="autoplay" value="True"><embed height="480" width="640" type="application/x-vlc-plugin" id="vlc1" pluginspage="http://www.videolan.org" version="VideoLAN.VLCPlugin.2" autoplay="yes" target="rtsp://217.146.95.166:554/playlist/ch12zqcif.3gp"></object>*@
+                                      @* <object ID="MediaPlayer" WIDTH="320" HEIGHT="270" CLASSID="CLSID:22D6f312-B0F6-11D0-94AB-0080C74C7E95" STANDBY="Loading Windows Media Player components..." TYPE="application/x-oleobject" CODEBASE="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=6,4,7,1112">
+
+<param name="autoStart" value="True">
+
+<param name="filename" value="rtsp://217.146.95.166:554/playlist/ch12zqcif.3gp">
+
+<param NAME="ShowControls" VALUE="False">
+
+<param NAME="ShowStatusBar" VALUE="False">
+
+<embed TYPE="application/x-mplayer2" SRC="rtsp://217.146.95.166:554/playlist/ch12zqcif.3gp" NAME="MediaPlayer" WIDTH="320" HEIGHT="270" autostart="1" showcontrols="0"></embed></object>*@
+
+                              @* <iframe src="rtsp://217.146.95.166:554/playlist/ch12zqcif.3gp" width="100" height="70"/>*@
+                                       @* <embed type="application/x-vlc-plugin" pluginspage="http://www.videolan.org" autoplay="yes" loop="no" width="300" height="200" target="rtsp://217.146.95.166:554/playlist/ch12zqcif.3gp" />
+<object classid="clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921" codebase="http://download.videolan.org/pub/videolan/vlc/last/win32/axvlc.cab" style="display:none;"></object>*@
+
+                                        @*<object ID="MediaPlayer" WIDTH="320" HEIGHT="270" CLASSID="CLSID:22D6f312-B0F6-11D0-94AB-0080C74C7E95" STANDBY="Loading Windows Media Player components..." TYPE="application/x-oleobject" CODEBASE="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=6,4,7,1112">
+
+<param name="autoStart" value="True">
+
+<param name="filename" value="rtsp://217.146.95.166:554/playlist/ch12zqcif.3gp">
+
+<param NAME="ShowControls" VALUE="False">
+
+<param NAME="ShowStatusBar" VALUE="False">
+
+<embed TYPE="application/x-mplayer2" SRC="rtsp://217.146.95.166:554/playlist/ch12zqcif.3gp" NAME="MediaPlayer" WIDTH="320" HEIGHT="270" autostart="1" showcontrols="0"></embed></object>*@
+                                       
+               @*                         <object classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"
+
+        codebase="http://www.apple.com/qtactivex/qtplugin.cab"
+
+        width="640" height="496">
+
+  <param name="src" value="sample-movie.qtl" />
+
+  <param name="autoplay" value="true" />
+
+  <param name="pluginspage" value="http://www.apple.com/quicktime/download/" />
+
+  <param name="controller" value="true" />
+
+  <!--[if !IE]> <-->
+
+    <object data="sample-movie.qtl" width="640" height="496" type="video/quicktime">
+
+      <param name="pluginurl" value="http://www.apple.com/quicktime/download/" />
+
+      <param name="controller" value="true" />
+
+    </object>
+
+  <!--> <![endif]-->
+
+</object>*@
+                                        <OBJECT ID="OBJECT1" width="640" height="480"
+CLASSID="CLSID:9BE31822-FDAD-461B-AD51-BE1D1C159921" codebase="http://download.videolan.org/pub/videolan/vlc/last/win32/axvlc.cab">
+<PARAM name="Target" value="rtsp://217.146.95.166:554/playlist/ch12zqcif.3gp"/>
+<PARAM name="MRL" value="rtsp://217.146.95.166:554/playlist/ch12zqcif.3gp"/>
+<PARAM NAME="AutoPlay" VALUE="true"/>
+</OBJECT>
+
+
+
                                     </li>
                                 </ul>
                            </div> <!-- /.flexslider -->
@@ -286,11 +381,11 @@ http://www.templatemo.com/preview/templatemo_406_flex
                 <div class="row">
                     <div class="portfolio-item col-md-3 col-sm-6">
                         <div class="portfolio-thumb">
-                            <img src="~/images/gallery/p1.jpg" alt="">
+                            <img src="~/images/gallery/port1.png" alt="">
                             <div class="portfolio-overlay">
-                                <h3>New Street</h3>
-                                <p>Asperiores commodi illo fuga perferendis dolore repellendus sapiente ipsum.</p>
-                                <a href="~/images/gallery/p1.jpg" data-rel="lightbox" class="expand">
+                                <h3>iVision</h3>
+                                <p>Automatic Video Surveillance In Distributed Environment (Android+ Desktop).</p>
+                                <a href="~/images/gallery/port1.jpg" data-rel="lightbox" class="expand">
                                     <i class="fa fa-search"></i>
                                 </a>
                             </div> <!-- /.portfolio-overlay -->
@@ -298,11 +393,11 @@ http://www.templatemo.com/preview/templatemo_406_flex
                     </div> <!-- /.portfolio-item -->
                     <div class="portfolio-item col-md-3 col-sm-6">
                         <div class="portfolio-thumb">
-                            <img src="~/images/gallery/p2.jpg" alt="">
+                            <img src="~/images/gallery/desktop.png" alt="">
                             <div class="portfolio-overlay">
-                                <h3>Floating</h3>
-                                <p>Asperiores commodi illo fuga perferendis dolore repellendus sapiente ipsum.</p>
-                                <a href="~/images/gallery/p2.jpg" data-rel="lightbox" class="expand">
+                                <h3>Desktop App of iVision</h3>
+                                <p>Have a live stream and managae your cameras.</p>
+                                <a href="~/images/gallery/desktop.png" data-rel="lightbox" class="expand">
                                     <i class="fa fa-search"></i>
                                 </a>
                             </div> <!-- /.portfolio-overlay -->
@@ -310,11 +405,11 @@ http://www.templatemo.com/preview/templatemo_406_flex
                     </div> <!-- /.portfolio-item -->
                     <div class="portfolio-item col-md-3 col-sm-6">
                         <div class="portfolio-thumb">
-                            <img src="~/images/gallery/p7.jpg" alt="">
+                            <img src="~/images/gallery/web.png" alt="">
                             <div class="portfolio-overlay">
-                                <h3>Urban Life</h3>
-                                <p>Asperiores commodi illo fuga perferendis dolore repellendus sapiente ipsum.</p>
-                                <a href="~/images/gallery/p7.jpg" data-rel="lightbox" class="expand">
+                                <h3>Web App of iVision</h3>
+                                <p>Have a live stream.</p>
+                                <a href="~/images/gallery/web.png" data-rel="lightbox" class="expand">
                                     <i class="fa fa-search"></i>
                                 </a>
                             </div> <!-- /.portfolio-overlay -->
@@ -322,17 +417,17 @@ http://www.templatemo.com/preview/templatemo_406_flex
                     </div> <!-- /.portfolio-item -->
                     <div class="portfolio-item col-md-3 col-sm-6">
                         <div class="portfolio-thumb">
-                            <img src="~/images/gallery/p8.jpg" alt="">
+                            <img src="~/images/gallery/android.png" alt="">
                             <div class="portfolio-overlay">
-                                <h3>Transport</h3>
-                                <p>Asperiores commodi illo fuga perferendis dolore repellendus sapiente ipsum.</p>
-                                <a href="~/images/gallery/p8.jpg" data-rel="lightbox" class="expand">
+                                <h3>Android App of iVision</h3>
+                                <p>Have a live stream and enjoy GSM facilities.</p>
+                                <a href="~/images/gallery/android.png" data-rel="lightbox" class="expand">
                                     <i class="fa fa-search"></i>
                                 </a>
                             </div> <!-- /.portfolio-overlay -->
                         </div> <!-- /.portfolio-thumb -->
                     </div> <!-- /.portfolio-item -->
-                    <div class="portfolio-item col-md-3 col-sm-6">
+                    @*<div class="portfolio-item col-md-3 col-sm-6">
                         <div class="portfolio-thumb">
                             <img src="~/images/gallery/p3.jpg" alt="">
                             <div class="portfolio-overlay">
@@ -380,10 +475,9 @@ http://www.templatemo.com/preview/templatemo_406_flex
                             </div> <!-- /.portfolio-overlay -->
                         </div> <!-- /.portfolio-thumb -->
                     </div> <!-- /.portfolio-item -->
-                </div> <!-- /.row -->
+                *@</div> <!-- /.row -->
             </div> <!-- /.container -->
         </div> <!-- /#portfolio -->
-
 
 
 
@@ -398,61 +492,62 @@ http://www.templatemo.com/preview/templatemo_406_flex
                 <div class="row">
                     <div class="team-member col-md-3 col-sm-6">
                         <div class="member-thumb">
-                            <img src="~/images/blue.png" alt="">
+                            <img src="~/images/hammad.jpg" alt="">
+                            <div class="team-overlay">
+                                <h3>Hammad Hassan</h3>
+                               @* <span>Designer</span>*@
+                                @*<ul class="social">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                                </ul>*@
+                            </div> <!-- /.team-overlay -->
+                        </div> <!-- /.member-thumb -->
+                    </div> <!-- /.team-member -->
+                    <div class="team-member col-md-3 col-sm-6">
+                        <div class="member-thumb">
+                            <img src="~/images/ahmed.jpg" alt="">
                             <div class="team-overlay">
                                 <h3>Ahmed Ali</h3>
                                @* <span>Designer</span>*@
-                                <ul class="social">
+                                @*<ul class="social">
                                     <li><a href="#" class="fa fa-facebook"></a></li>
                                     <li><a href="#" class="fa fa-twitter"></a></li>
                                     <li><a href="#" class="fa fa-linkedin"></a></li>
-                                </ul>
+                                </ul>*@
                             </div> <!-- /.team-overlay -->
                         </div> <!-- /.member-thumb -->
                     </div> <!-- /.team-member -->
                     <div class="team-member col-md-3 col-sm-6">
                         <div class="member-thumb">
-                            <img src="~/images/blue.png" alt="">
-                            <div class="team-overlay">
-                                <h3>Hammad Hassan</h3>
-                               @* <span>Developer</span>*@
-                                <ul class="social">
-                                    <li><a href="#" class="fa fa-facebook"></a></li>
-                                    <li><a href="#" class="fa fa-twitter"></a></li>
-                                    <li><a href="#" class="fa fa-linkedin"></a></li>
-                                </ul>
-                            </div> <!-- /.team-overlay -->
-                        </div> <!-- /.member-thumb -->
-                    </div> <!-- /.team-member -->
-                    <div class="team-member col-md-3 col-sm-6">
-                        <div class="member-thumb">
-                            <img src="~/images/blue.png" alt="">
+                            <img src="~/images/rabia.png" alt="">
                             <div class="team-overlay">
                                 <h3>Rabia Mehmood</h3>
-                               @* <span>Director</span>*@
-                                <ul class="social">
+                               @* <span>Designer</span>*@
+                                @*<ul class="social">
                                     <li><a href="#" class="fa fa-facebook"></a></li>
                                     <li><a href="#" class="fa fa-twitter"></a></li>
                                     <li><a href="#" class="fa fa-linkedin"></a></li>
-                                </ul>
+                                </ul>*@
                             </div> <!-- /.team-overlay -->
                         </div> <!-- /.member-thumb -->
                     </div> <!-- /.team-member -->
                     <div class="team-member col-md-3 col-sm-6">
                         <div class="member-thumb">
-                            <img src="~/images/blue.png" alt="">
+                            <img src="~/images/maham.png" alt="">
                             <div class="team-overlay">
                                 <h3>Maham Khan</h3>
-                                @*<span>Chief Executive</span>*@
-                                <ul class="social">
+                               @* <span>Designer</span>*@
+                                @*<ul class="social">
                                     <li><a href="#" class="fa fa-facebook"></a></li>
                                     <li><a href="#" class="fa fa-twitter"></a></li>
                                     <li><a href="#" class="fa fa-linkedin"></a></li>
-                                </ul>
+                                </ul>*@
                             </div> <!-- /.team-overlay -->
                         </div> <!-- /.member-thumb -->
                     </div> <!-- /.team-member -->
                 </div> <!-- /.row -->
+
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <div class="skills-heading">
@@ -462,16 +557,16 @@ http://www.templatemo.com/preview/templatemo_406_flex
                 </div> <!-- /.row -->
                 <div class="row">
                     <div class="col-md-8 col-sm-6">
-                        <p>  Aliquam faucibus in dolor sed vestibulum. Sed adipiscing malesuada luctus. Morbi tincidunt, tellus scelerisque scelerisque scelerisque, sapien dui pretium augue, at consectetur sapien tellus vitae nunc. Ut vitae metus quis nulla cursus adipiscing pretium vel dolor. Fusce lacinia accumsan arcu, quis porttitor nisi tincidunt ut. <br><br>
-						Etiam tincidunt, magna eu elementum tristique, sapien nisl venenatis lacus, nec sagittis lectus dui eget lorem. Donec in tempus mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin laoreet ac quam et volutpat. Aenean egestas interdum dolor, et mollis lectus consequat a.<br><br>
-						Nunc malesuada nunc eget nunc sollicitudin posuere. Maecenas vitae tortor quis odio hendrerit sagittis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris ullamcorper, felis sit amet gravida malesuada, nisi sem rhoncus massa, non tempor est erat sit amet diam.<!-- spacing for mobile viewing --><br><br>
+                        <p> Our team can facilitate you by developing apps in .net, android, java, html. <br><br>
+						We also have Matlab expertise. <br><br>
+						<!-- spacing for mobile viewing --><br><br>
 						</p>
                     </div> <!-- /.col-md-8 -->
                     <div class="col-md-4 col-sm-6">
                         <ul class="progess-bars">
                             <li>
                                 <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">Photoshop 90%</div>
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">Android 90%</div>
                                 </div>
                             </li>
                             <li>
@@ -481,12 +576,12 @@ http://www.templatemo.com/preview/templatemo_406_flex
                             </li>
                             <li>
                                 <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;">WordPress 68%</div>
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;">MATLAB 68%</div>
                                 </div>
                             </li>
                             <li>
                                 <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">Marketing 95%</div>
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">.NET 95%</div>
                                 </div>
                             </li>
                         </ul>
@@ -500,7 +595,7 @@ http://www.templatemo.com/preview/templatemo_406_flex
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-xs-12 text-left">
-                        Copyright © 2015 RS Solutions
+                        Copyright © 2015 iVision
                     </div> <!-- /.text-center -->
                     <div class="col-md-4 hidden-xs text-right">
                         <a href="#top" id="go-top">Back to top</a>
@@ -522,7 +617,12 @@ http://www.templatemo.com/preview/templatemo_406_flex
         <script type="text/javascript">
             function load(url) {
 
-                $("#myImage").attr("src", url);
+                //  $("#myImage").attr("src", url);
+                var vlc = document.getElementById("myImage");
+                vlc.playlist.items.clear();
+                   var id = vlc.playlist.add("rtsp://217.146.95.166:554/playlist/ch12zqcif.3gp");
+               // var id = vlc.playlist.add(url);
+                vlc.playlist.playItem(id);
 
             }
             function alert() {
