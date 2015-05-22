@@ -620,8 +620,8 @@ CLASSID="CLSID:9BE31822-FDAD-461B-AD51-BE1D1C159921" codebase="http://download.v
                 //  $("#myImage").attr("src", url);
                 var vlc = document.getElementById("myImage");
                 vlc.playlist.items.clear();
-                   var id = vlc.playlist.add("rtsp://217.146.95.166:554/playlist/ch12zqcif.3gp");
-               // var id = vlc.playlist.add(url);
+                  // var id = vlc.playlist.add("rtsp://217.146.95.166:554/playlist/ch12zqcif.3gp");
+                var id = vlc.playlist.add(url);
                 vlc.playlist.playItem(id);
 
             }
